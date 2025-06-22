@@ -25,7 +25,7 @@ class _AddReportScreenState extends State<AddReportScreen> {
     if (userId.isEmpty) return;
 
     final response = await http.get(Uri.parse(
-      'http://192.168.1.10:5000/api/validate_user/$userId',
+      'http://192.168.1.10:5000/api/validate_user/$userId',  // url de validation pour l'utilisateur
     ));
 
     if (response.statusCode == 200 && response.body == 'true') {
